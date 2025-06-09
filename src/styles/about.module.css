@@ -1,0 +1,187 @@
+.aboutSection {
+  padding: 8rem 2rem;
+  background-color: rgba(0, 0, 0, 0.85);
+  color: white;
+  text-align: center;
+  scroll-margin-top: 100px;
+}
+
+.aboutTitle {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.aboutText {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto 4rem;
+  line-height: 1.6;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Optional: keep if you want to reuse grid */
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.featureCard {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.featureCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+/* 🎡 Marquee Styling */
+.marqueeRow {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  gap: 2rem;
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+/* ✨ Individual Floating Feature Pills */
+.feature {
+  padding: 0.8rem 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: none;
+  backdrop-filter: blur(6px);
+  color: white;
+  font-weight: 500;
+  font-size: 1rem;
+  border-radius: 999px;
+  white-space: nowrap;
+  margin-right: 1rem;
+  transition: all 0.3s ease;
+}
+
+.feature:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.05);
+  cursor: default;
+}
+.wordSwitcher {
+  display: inline-block;
+  height: 1.2em;
+  overflow: hidden;
+  vertical-align: bottom;
+  position: relative;
+  width: 7.5ch; /* 👈 locks width to 7–8 characters */
+  text-align: left;
+}
+
+.wordSwitcher .word {
+  display: block;
+  animation: slideWords 9s infinite;
+}
+.word {
+  text-decoration: underline;
+  text-decoration-color: #00ffff; /* Aqua neon */
+  text-underline-offset: 4px;
+  font-weight: 600;
+}
+
+@keyframes slideWords {
+  0%    { transform: translateY(0%); }
+  20%   { transform: translateY(-100%); }
+  40%   { transform: translateY(-200%); }
+  60%   { transform: translateY(-300%); }
+  80%   { transform: translateY(-300%); }
+  100%  { transform: translateY(0%); }
+}
+
+.videoWrapper {
+  margin: 3rem auto;
+  max-width: 900px;
+  border-radius: 12px;
+  overflow: hidden;
+  
+}
+
+.aboutVideo {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+}
+
+.whyItWorks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  padding: 5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.textColumn {
+  flex: 1;
+  min-width: 300px;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: left;
+}
+
+.textColumn h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-family: 'Inter', sans-serif;
+  text-align: left;
+}
+
+.textColumn p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  text-align: left;
+}
+
+.imageColumn {
+  flex: 1;
+  min-width: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.neuralImage {
+  width: 60%; /* Try 40–70% depending on your layout */
+  max-width: 400px; /* Prevents it from stretching too much */
+  height: auto; /* Keeps aspect ratio */
+}
+.creatorBio {
+  margin-top: 6rem;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 3rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.creatorBio h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.creatorBio p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+}
