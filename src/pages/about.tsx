@@ -1,32 +1,34 @@
 import styles from '@/styles/about.module.css';
 import Marquee from "react-fast-marquee";
-import { TypeAnimation } from 'react-type-animation';
+import BehindScience from './components/behindscience'; // ✅ Correct path and casing
 
 export default function About() {
   return (
     <section id="about" className={styles.aboutSection}>
-    <h2 className={styles.aboutTitle}>
+      <h2 className={styles.aboutTitle}>
         Intelligent Study. Powered by Neural Design. For{' '}
-       <span className={styles.wordSwitcher}>
-         <span className={styles.word}>Thinkers.</span>
-         <span className={styles.word}>Students.</span>
-         <span className={styles.word}>Learners.</span>
-         <span className={styles.word}>You.</span>
-       </span>
-</h2>
+        <span className={styles.wordSwitcher}>
+          <span className={styles.word}>Thinkers.</span>
+          <span className={styles.word}>Students.</span>
+          <span className={styles.word}>Learners.</span>
+          <span className={styles.word}>You.</span>
+        </span>
+      </h2>
+
       <p className={styles.aboutText}>
-        MindByte is your AI-powered cognitive learning companion — designed to replace outdated study habits with smart, neuroscience-inspired methods. From interactive flashcards and gamified quizzes to an intelligent study planner and real-time performance insights, MindByte transforms how you absorb, retain, and master knowledge.
+        MindByte is your AI-powered cognitive learning companion — designed to replace outdated study habits with smart, neuroscience-inspired methods.
+        From interactive flashcards and gamified quizzes to an intelligent study planner and real-time performance insights, MindByte transforms how you absorb, retain, and master knowledge.
       </p>
 
-      {/* Optional: keep cards or remove */}
-      {/* 
-      <div className={styles.featuresGrid}>
-        <div className={styles.featureCard}>...</div>
-        ...
-      </div>
-      */}
+    
 
-      {/* ✨ MARQUEE SECTION */}
+      <div className={styles.videoWrapper}>
+        <video className={styles.aboutVideo} controls autoPlay muted loop playsInline>
+          <source src="/brain.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
       <Marquee speed={40} gradient={false} pauseOnHover className={styles.marqueeRow}>
         <div className={styles.feature}>🦾 AI Companion</div>
         <div className={styles.feature}>🗻 Smart Study Plans</div>
@@ -37,39 +39,42 @@ export default function About() {
         <div className={styles.feature}>🧩 Adaptive Learning</div>
       </Marquee>
 
-      <div className={styles.videoWrapper}>
-        <video className={styles.aboutVideo} controls autoPlay muted loop playsInline>
-          <source src="/brain.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+      {/* ✅ Modular Cognitive Science Section */}
+      <BehindScience />
+
+      {/* About the Creator */}
+      <div className={styles.container}>
+        <h2 className={styles.sectionTitle}>About the Creator</h2>
+        <div className={styles.gridContainer}>
+          <div className={styles.socialColumn}>
+            <ul className={styles.socialList}>
+              <li><a href="https://github.com/san5kriti" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+              <li><a href="https://www.linkedin.com/in/sanskritishelke" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+              <li><a href="https://sanskritishelke.com" target="_blank" rel="noopener noreferrer">Website</a></li>
+              <li><a href="https://medium.com/@sans" target="_blank" rel="noopener noreferrer">Medium</a></li>
+            </ul>
+          </div>
+
+          <div className={styles.bioColumn}>
+            <p>
+              I'm <strong>Sanskriti Shelke</strong>, a 19-year-old based in Singapore, graduating with a BSc in Artificial Intelligence & Computer Science from the University of Birmingham. I began my undergraduate journey at 16, driven by an insatiable curiosity for how intelligence works — biological, artificial, and everything in between.
+            </p>
+            <p>
+              My work lies at the intersection of <em>machine learning</em>, <em>quantum computing</em>, and <em>software engineering</em>. I specialize in <strong>hybrid AI-quantum systems</strong> and intelligent optimization techniques, with a deep interest in <strong>space tech</strong> and <strong>applied AI</strong> for scientific discovery.
+            </p>
+            <h3 className={styles.subheading}>Why I Built MindByte</h3>
+            <p>
+              MindByte was born out of <strong>frustration</strong> and <strong>hope</strong>. I saw how many brilliant students — including myself — struggled not with intelligence, but with outdated study methods: cramming, passive rereading, last-minute burnout cycles.
+            </p>
+            <p>
+              I wanted to create a learning companion that understood how the <em>brain</em> works and supported why it struggles. By fusing <strong>neuroscience</strong> with <strong>AI</strong>, MindByte is designed to make learning feel natural, effective, and even fun.
+            </p>
+            <p>
+              From <em>spaced flashcards</em> and <em>low-stakes quizzes</em> to <em>smart dashboards</em> and <em>personalized study plans</em>, it's my attempt to make smart learning a <strong>right</strong>, not a privilege.
+            </p>
+          </div>
+        </div>
       </div>
-
-
-
-      <div className={styles.whyItWorks}>
-  <div className={styles.textColumn}>
-    <h3>Cognitive Science in Action</h3>
-    <p>
-
-
-MindByte is grounded in the science of <em>cognitive load theory</em>, <em>active recall</em>, and <em>spaced repetition</em>, transforming traditional study habits into a highly optimized learning process.<br /><br />
-
-💡 <strong>Flashcards</strong> promote active recall, compelling the brain to retrieve information — a proven method for strengthening long-term memory.<br />
-🧠 <strong>Spaced quizzes</strong> are designed to reduce cognitive fatigue while enhancing retention through low-stakes repetition.<br />
-⏰ <strong>Performance dashboards</strong> mirror feedback loops used in cognitive science, helping learners track progress, adapt strategies, and target knowledge gaps effectively.<br /><br />
-
-By integrating neuroscience with artificial intelligence, MindByte delivers a <strong>personalized, data-informed</strong> study experience — bridging the gap between how the brain naturally learns and how modern tools can support it. The result: <strong>smarter, faster, and more enduring learning</strong> for every learner.
-    </p>
-  </div>
-
-  <div className={styles.imageColumn}>
-    <img
-      src="/neural-map.png"
-      alt="Neural pathways"
-      className={styles.neuralImage}
-    />
-  </div>
-</div>
     </section>
   );
 }

@@ -122,66 +122,67 @@
   display: block;
 }
 
-.whyItWorks {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 4rem;
+
+.creatorSection {
   padding: 5rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  flex-wrap: wrap;
-  text-align: left;
+  background-color: black;
+  color: white;
 }
 
-.textColumn {
-  flex: 1;
-  min-width: 300px;
-  color: rgba(255, 255, 255, 0.9);
-  text-align: left;
-}
-
-.textColumn h3 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  font-family: 'Inter', sans-serif;
-  text-align: left;
-}
-
-.textColumn p {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  text-align: left;
-}
-
-.imageColumn {
-  flex: 1;
-  min-width: 100px;
+.gridContainer {
   display: flex;
-  justify-content: center;
+  gap: 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: flex-start;
 }
 
-.neuralImage {
-  width: 60%; /* Try 40–70% depending on your layout */
-  max-width: 400px; /* Prevents it from stretching too much */
-  height: auto; /* Keeps aspect ratio */
-}
-.creatorBio {
-  margin-top: 6rem;
-  background: rgba(255, 255, 255, 0.03);
-  padding: 3rem;
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  text-align: center;
+/* Left Column - Socials */
+.socialColumn {
+  flex: 0 0 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding-top: 1rem;
 }
 
-.creatorBio h3 {
-  font-size: 1.8rem;
+.socialList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.socialList li {
   margin-bottom: 1rem;
 }
 
-.creatorBio p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.85);
+.socialList a {
+  color: #FFD580;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  transition: color 0.3s;
+}
+
+.socialList a:hover {
+  color: white;
+}
+
+/* Right Column - Bio */
+.bioColumn {
+  flex: 1;
+}
+
+.sectionTitle {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.subheading {
+  margin-top: 2rem;
+  font-size: 1.4rem;
+  color: #FFD580;
+  font-weight: 600;
 }
