@@ -1,6 +1,7 @@
 import styles from '@/styles/about.module.css';
 import Marquee from "react-fast-marquee";
 import BehindScience from './components/behindscience'; // ✅ Correct path and casing
+import BioPage from './components/bio';
 
 export default function About() {
   return (
@@ -41,40 +42,11 @@ export default function About() {
 
       {/* ✅ Modular Cognitive Science Section */}
       <BehindScience />
+      <BioPage />
 
-      {/* About the Creator */}
-      <div className={styles.container}>
-        <h2 className={styles.sectionTitle}>About the Creator</h2>
-        <div className={styles.gridContainer}>
-          <div className={styles.socialColumn}>
-            <ul className={styles.socialList}>
-              <li><a href="https://github.com/san5kriti" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-              <li><a href="https://www.linkedin.com/in/sanskritishelke" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-              <li><a href="https://sanskritishelke.com" target="_blank" rel="noopener noreferrer">Website</a></li>
-              <li><a href="https://medium.com/@sans" target="_blank" rel="noopener noreferrer">Medium</a></li>
-            </ul>
-          </div>
-
-          <div className={styles.bioColumn}>
-            <p>
-              I'm <strong>Sanskriti Shelke</strong>, a 19-year-old based in Singapore, graduating with a BSc in Artificial Intelligence & Computer Science from the University of Birmingham. I began my undergraduate journey at 16, driven by an insatiable curiosity for how intelligence works — biological, artificial, and everything in between.
-            </p>
-            <p>
-              My work lies at the intersection of <em>machine learning</em>, <em>quantum computing</em>, and <em>software engineering</em>. I specialize in <strong>hybrid AI-quantum systems</strong> and intelligent optimization techniques, with a deep interest in <strong>space tech</strong> and <strong>applied AI</strong> for scientific discovery.
-            </p>
-            <h3 className={styles.subheading}>Why I Built MindByte</h3>
-            <p>
-              MindByte was born out of <strong>frustration</strong> and <strong>hope</strong>. I saw how many brilliant students — including myself — struggled not with intelligence, but with outdated study methods: cramming, passive rereading, last-minute burnout cycles.
-            </p>
-            <p>
-              I wanted to create a learning companion that understood how the <em>brain</em> works and supported why it struggles. By fusing <strong>neuroscience</strong> with <strong>AI</strong>, MindByte is designed to make learning feel natural, effective, and even fun.
-            </p>
-            <p>
-              From <em>spaced flashcards</em> and <em>low-stakes quizzes</em> to <em>smart dashboards</em> and <em>personalized study plans</em>, it's my attempt to make smart learning a <strong>right</strong>, not a privilege.
-            </p>
-          </div>
-        </div>
-      </div>
+      
+       
+     
     </section>
   );
 }
