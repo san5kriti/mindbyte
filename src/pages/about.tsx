@@ -1,11 +1,20 @@
+'use client';
 import styles from '@/styles/about.module.css';
 import Marquee from "react-fast-marquee";
-import BehindScience from './components/behindscience'; // ✅ Correct path and casing
+import BehindScience from './components/behindscience';
 import BioPage from './components/bio';
+import { motion } from 'framer-motion';
 
 export default function About() {
   return (
-    <section id="about" className={styles.aboutSection}>
+    <motion.section
+      id="about"
+      className={styles.aboutSection}
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.9, ease: 'easeOut' }}
+      viewport={{ once: true }}
+    >
       <h2 className={styles.aboutTitle}>
         Intelligent Study. Powered by Neural Design. For{' '}
         <span className={styles.wordSwitcher}>
@@ -20,8 +29,6 @@ export default function About() {
         MindByte is your AI-powered cognitive learning companion — designed to replace outdated study habits with smart, neuroscience-inspired methods.
         From interactive flashcards and gamified quizzes to an intelligent study planner and real-time performance insights, MindByte transforms how you absorb, retain, and master knowledge.
       </p>
-
-    
 
       <div className={styles.videoWrapper}>
         <video className={styles.aboutVideo} controls autoPlay muted loop playsInline>
@@ -40,13 +47,8 @@ export default function About() {
         <div className={styles.feature}>🧩 Adaptive Learning</div>
       </Marquee>
 
-      {/* ✅ Modular Cognitive Science Section */}
       <BehindScience />
       <BioPage />
-
-      
-       
-     
-    </section>
+    </motion.section>
   );
 }

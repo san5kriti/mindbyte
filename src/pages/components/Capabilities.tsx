@@ -1,30 +1,53 @@
+'use client';
 import styles from '@/styles/capabilities.module.css';
-import { Code, BrainCog, GraduationCap, BrainCircuitIcon, LucideRepeat, BarChart3Icon, RectangleHorizontalIcon, PresentationIcon, BarChart2Icon } from 'lucide-react'; // optional: use lucide or your own SVGs
+import {
+  BrainCircuitIcon,
+  LucideRepeat,
+  PresentationIcon,
+  BarChart2Icon,
+} from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function Capabilities() {
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 30 },
+    visible: (i: number) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: i * 0.2,
+        duration: 0.6,
+        ease: 'easeOut',
+      },
+    }),
+  };
+
   return (
     <section className={styles.section}>
       <div className={styles.grid}>
-        <div className={styles.item}>
-          <BrainCircuitIcon className={styles.icon} />
-          <h4>Cognitive Load Theory</h4>
-          <p>Structured learning to reduce mental overwhelm and improve processing bandwidth.</p>
-        </div>
-        <div className={styles.item}>
-          <LucideRepeat className={styles.icon} />
-          <h4>Spaced Repetition</h4>
-          <p>Scientifically proven technique to encode long-term memory by timing reviews just right.</p>
-        </div>
-        <div className={styles.item}>
-          <PresentationIcon className={styles.icon} />
-          <h4>Active Recall</h4>
-          <p>Forcing the brain to retrieve info (like flashcards or questions) creates durable neural connections.</p>
-        </div>
-        <div className={styles.item}>
-          <BarChart2Icon className={styles.icon} />
-          <h4>Feedback Loops</h4>
-          <p>Self-awareness through performance metrics helps learners adapt, reflect, and accelerate mastery.</p>
-        </div>
+        {[{
+          Icon: BrainCircuitIcon, title: 'Cognitive Load Theory', desc: 'Structured learning to reduce mental overwhelm...',
+        }, {
+          Icon: LucideRepeat, title: 'Spaced Repetition', desc: 'Scientifically proven technique...',
+        }, {
+          Icon: PresentationIcon, title: 'Active Recall', desc: 'Forcing the brain to retrieve info...',
+        }, {
+          Icon: BarChart2Icon, title: 'Feedback Loops', desc: 'Self-awareness through performance metrics...',
+        }].map(({ Icon, title, desc }, i) => (
+          <motion.div
+            key={i}
+            className={styles.item}
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            custom={i}
+          >
+            <Icon className={styles.icon} />
+            <h4>{title}</h4>
+            <p>{desc}</p>
+          </motion.div>
+        ))}
       </div>
     </section>
   );

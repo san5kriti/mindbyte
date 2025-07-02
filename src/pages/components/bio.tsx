@@ -1,14 +1,16 @@
-// app/bio/page.tsx
+'use client';
 import styles from '@/styles/bio.module.css';
 import Image from 'next/image';
 import { FaGithub, FaLinkedin, FaEnvelope, FaGlobe } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 
 export default function BioPage() {
   return (
     <main className={styles.page}>
       <div className={styles.container}>
         {/* Left side */}
-        <div className={styles.left}>
+        <motion.div
+           className={styles.left}>
           <h1 className={styles.heading}>Behind The Build</h1>
           <p className={styles.text}>
             Hi, I’m <strong>Sanskriti Shelke</strong> a recent graduate in Artificial Intelligence and Computer Science from the University of Birmingham.
@@ -19,10 +21,17 @@ export default function BioPage() {
           <p className={styles.text}>
             If you’d like to collaborate, share feedback, or explore an idea together, feel free to reach out.
           </p>
-        </div>
+        
+        </motion.div>
 
         {/* Right side */}
-        <div className={styles.right}>
+        <motion.div
+          className={styles.right}
+          initial={{ opacity: 0, x: 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
           <Image
             src="/mindbyte.png"
             alt="MindByte Logo"
@@ -31,25 +40,15 @@ export default function BioPage() {
             className={styles.logo}
           />
           <div className={styles.links}>
-            <a href="mailto:sanskritishelke.r.com">
-              <FaEnvelope /> &nbsp; email
-            </a>
-            <a href="https://www.linkedin.com/in/sanskritishelke/" target="_blank">
-              <FaLinkedin /> &nbsp; linkedin
-            </a>
-            <a href="https://github.com/san5kriti" target="_blank">
-              <FaGithub /> &nbsp; github
-            </a>
-            <a href="https://sanskritishelke.com/" target="_blank">
-              <FaGlobe /> &nbsp; website
-            </a>
+            <a href="mailto:sanskritishelke.r.com"><FaEnvelope /> &nbsp; email</a>
+            <a href="https://www.linkedin.com/in/sanskritishelke/" target="_blank"><FaLinkedin /> &nbsp; linkedin</a>
+            <a href="https://github.com/san5kriti" target="_blank"><FaGithub /> &nbsp; github</a>
+            <a href="https://sanskritishelke.com/" target="_blank"><FaGlobe /> &nbsp; website</a>
           </div>
-        </div>
+        </motion.div>
       </div>
 
-      <footer className={styles.footer}>
-        Sanskriti Shelke 2025
-      </footer>
+      <footer className={styles.footer}>Sanskriti Shelke 2025</footer>
     </main>
   );
 }
