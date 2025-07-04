@@ -1,17 +1,35 @@
+.aboutWrapper {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.starCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: transparent;
+}
+
 .aboutSection {
   padding: 8rem 2rem;
   background-color: rgba(0, 0, 0, 0.85);
   color: white;
   text-align: center;
   scroll-margin-top: 100px;
+  position: relative;
+  z-index: 1;
 }
 
 .aboutTitle {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 2.8rem;
   font-weight: 700;
   margin-bottom: 2rem;
-  font-family: 'Inter', sans-serif;
 }
 
 .aboutText {
@@ -77,13 +95,14 @@
   transform: scale(1.05);
   cursor: default;
 }
+
 .wordSwitcher {
   display: inline-block;
   height: 1.2em;
   overflow: hidden;
   vertical-align: bottom;
   position: relative;
-  width: 7.5ch; /* 👈 locks width to 7–8 characters */
+  width: 7.5ch;
   text-align: left;
 }
 
@@ -91,6 +110,7 @@
   display: block;
   animation: slideWords 9s infinite;
 }
+
 .word {
   text-decoration: underline;
   text-decoration-color: #00ffff; /* Aqua neon */
@@ -112,7 +132,6 @@
   max-width: 900px;
   border-radius: 12px;
   overflow: hidden;
-  
 }
 
 .aboutVideo {
@@ -121,7 +140,6 @@
   border-radius: 12px;
   display: block;
 }
-
 
 .creatorSection {
   padding: 5rem 2rem;
