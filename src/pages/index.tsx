@@ -24,7 +24,13 @@ export default function Home() {
 
       {/* Hero Content */}
       <div className={styles.content}>
-        <img src="/mindbyte.png" alt="MindByte Logo" width={500} />
+    
+        <div className={styles.heroText}>
+          <h1>Intelligent Study.<br />Powered by Neural Design.<br />For Thinkers.</h1>
+          <p>
+            Designed to replace outdated study habits with smart, neuroscience-inspired methods. Transform how you absorb, retain, and master knowledge.
+          </p>
+        </div>
 
         {/* Buttons */}
         <div className={styles.buttonGroup}>

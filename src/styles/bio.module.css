@@ -29,8 +29,9 @@
 
 .container {
   display: flex;
+  color: #FFFFFF;
   flex-direction: row;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   gap: 5rem;
   flex-wrap: wrap;
   max-width: 1100px;
