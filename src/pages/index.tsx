@@ -9,7 +9,7 @@ export default function Home() {
   };
 
   return (
-    <div className={styles.container}>
+    <div id="home" className={styles.container}>
        <Navbar />
       {/* Background Video */}
       <video

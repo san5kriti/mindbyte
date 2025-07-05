@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 export default function BehindTheScience() {
   return (
-    <div className={styles.videoSection}>
+    <div id="features" className={styles.videoSection}>
       <video
         autoPlay
         muted

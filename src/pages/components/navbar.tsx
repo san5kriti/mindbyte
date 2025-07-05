@@ -5,7 +5,7 @@ import styles from '@/styles/Navbar.module.css';
 export default function Navbar() {
   return (
     <nav className={styles.navbar}>
-      <Link href="/" className={styles.logoLink}>
+      <Link href="#home" className={styles.logoLink}>
         <img
           src="/mindbytelogo2.png"
           alt="MindByte Logo"

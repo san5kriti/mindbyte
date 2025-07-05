@@ -55,7 +55,7 @@ export default function BioPage() {
   }, []);
 
   return (
-    <div className={styles.pageWrapper}>
+    <div id="contact"className={styles.pageWrapper}>
       <canvas ref={canvasRef} className={styles.starCanvas} />
 
       <main id="bio" className={styles.page}>
