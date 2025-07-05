@@ -57,12 +57,15 @@
   line-height: 1.2;
   margin: 0.5rem 0; /* small gap between lines */
   color: white;
+  margin-left: -8%;
 }
 
 .heroText p {
-  font-size: 1.1rem;
+  font-size: 1.34rem;
   color: whitesmoke;
-  line-height: 1.3;
+  line-height: 1.4;
+  margin-left: -8%;
+
   
   
 }
@@ -71,9 +74,10 @@
   display: flex;
   gap: 4rem;
   margin-top: 2.5rem;
+  margin-left: -8%;
 }
 
-/* SCROLL BUTTON STYLE (used for both buttons now) */
+/* SCROLL BUTTON STYLES (try and switchß if needed) */
 .scrollButton {
   padding: 0.90rem 2.5rem;
   min-width: 180px;
@@ -115,6 +119,51 @@
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
 }
 
+
+.scrollButton2 {
+  padding: 0.90rem 2.5rem;
+  min-width: 180px;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  border-radius: 3cm;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.9);
+  /* font-family: 'Orbitron', sans-serif; */
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  margin-top: -10%;
+}
+
+.scrollButton2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.661), rgba(255, 255, 255, 0.518));
+  transform: skewX(-20deg);
+  transition: left 0.5s ease;
+}
+
+.scrollButton2:hover::before {
+  left: 125%;
+}
+
+.scrollButton2:hover {
+  background: rgba(255, 255, 255, 1);
+  border-color: rgba(255, 255, 255, 0.05);
+  transform: translateY(-3px);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+  color: black;
+}
+
 .initials {
   position: absolute;
   top: 1.5rem;
@@ -142,7 +191,7 @@
   overflow: hidden;
   vertical-align: bottom;
   position: relative;
-  width: 7.5ch;
+  width: 8.5ch;
   text-align: left;
 }
 
@@ -173,9 +222,9 @@
 
 .wordSwitcher .word:nth-child(4) {
   text-decoration: underline;
-  text-decoration-color: #7fff00; /* Chartreuse */
+  text-decoration-color: #7e6dd1; /* Lilac? */
   color: white;
-  text-shadow: 0 0 4px #7fff00;
+  text-shadow: 0 0 4px #7e6dd1;
 }
 
 .word {
@@ -183,6 +232,7 @@
   text-decoration-color: white;
   text-underline-offset: 4px;
   font-weight: 600;
+
 }
 
 @keyframes slideWords {

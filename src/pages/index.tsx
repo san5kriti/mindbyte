@@ -41,17 +41,17 @@ export default function Home() {
 
   <p>
     Designed to replace outdated study habits with smart, neuroscience-inspired methods.
-    Transform how you absorb, retain, and master knowledge.
+    <br/> Transform how you absorb, retain, and master knowledge.
   </p>
 </div>
         
 
         {/* Buttons */}
         <div className={styles.buttonGroup}>
-          <button className={styles.scrollButton} onClick={scrollToAbout}>
+          <button className={styles.scrollButton2} onClick={scrollToAbout}>
             Learn More
           </button>
-          <button className={styles.scrollButton}>Demo</button>
+          <button className={styles.scrollButton2}>Demo</button>
         </div>
       </div>
 
