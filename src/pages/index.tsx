@@ -26,11 +26,25 @@ export default function Home() {
       <div className={styles.content}>
     
         <div className={styles.heroText}>
-          <h1>Intelligent Study.<br />Powered by Neural Design.<br />For Thinkers.</h1>
-          <p>
-            Designed to replace outdated study habits with smart, neuroscience-inspired methods. Transform how you absorb, retain, and master knowledge.
-          </p>
-        </div>
+  <h1>
+  Intelligent Study.<br />
+  Powered by Neural Design.<br />
+  For{" "}
+  <span className={styles.wordSwitcher}>
+    <span className={styles.word}>Thinkers.</span>
+    <span className={styles.word}>Students.</span>
+    <span className={styles.word}>Learners.</span>
+    <span className={styles.word}>You.</span>
+  </span>
+</h1>
+  
+
+  <p>
+    Designed to replace outdated study habits with smart, neuroscience-inspired methods.
+    Transform how you absorb, retain, and master knowledge.
+  </p>
+</div>
+        
 
         {/* Buttons */}
         <div className={styles.buttonGroup}>
