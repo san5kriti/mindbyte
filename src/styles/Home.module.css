@@ -150,10 +150,37 @@
   display: block;
   animation: slideWords 9s infinite;
 }
+.wordSwitcher .word:nth-child(1) {
+  text-decoration: underline;
+  text-decoration-color: #00ffff; /* Aqua */
+  color: white;
+  text-shadow: 0 0 4px #00ffff;
+}
+
+.wordSwitcher .word:nth-child(2) {
+  text-decoration: underline;
+  text-decoration-color: #ff69b4; /* Hot Pink */
+  color: white;
+  text-shadow: 0 0 4px #ff69b4;
+}
+
+.wordSwitcher .word:nth-child(3) {
+  text-decoration: underline;
+  text-decoration-color: #ffd700; /* Gold */
+  color: white;
+  text-shadow: 0 0 4px #ffd700;
+}
+
+.wordSwitcher .word:nth-child(4) {
+  text-decoration: underline;
+  text-decoration-color: #7fff00; /* Chartreuse */
+  color: white;
+  text-shadow: 0 0 4px #7fff00;
+}
 
 .word {
   text-decoration: underline;
-  text-decoration-color: #00ffff; /* Aqua neon */
+  text-decoration-color: white;
   text-underline-offset: 4px;
   font-weight: 600;
 }
