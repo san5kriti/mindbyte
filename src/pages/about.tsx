@@ -80,7 +80,7 @@ export default function About() {
 
         <div className={styles.videoWrapper}>
           <video className={styles.aboutVideo} controls autoPlay muted loop playsInline>
-            <source src="/brain.mp4" type="video/mp4" />
+            <source src="/mindbyte.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
