@@ -5,12 +5,17 @@
   height: 4rem;
   background: transparent;
   backdrop-filter: blur(8px);
-  justify-content: flex-start;
-  gap: 2rem; /* add spacing manually if needed */
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   padding: 0 2rem;
   z-index: 999;
-  
+}
+
+.left,
+.right {
+  display: flex;
+  align-items: center;
 }
 
 .logoLink {
@@ -20,16 +25,10 @@
 }
 
 .logo {
-  position: absolute;
-  top: -0.75rem;
-  left: 1rem;
-  height: 95px; 
-  z-index: 2;
-  opacity: 1;
+  height: 95px;
   user-select: none;
   pointer-events: none;
   transition: transform 0.4s ease;
-
 }
 
 .logo:hover {
@@ -37,34 +36,11 @@
 }
 
 .navLinks {
-  size: 28px;
-  list-style: none;
   display: flex;
   gap: 2rem;
+  list-style: none;
+  margin: 0;
   padding: 0;
-  margin-left: 30rem;
-  margin-top: -3%;
-  
-}
-.githubIcon {
-  color: rgba(255, 255, 255, 0.347);
-  transition: transform 0.2s ease, color 0.3s ease;
-  margin-left: 70rem;
-  top: -0.75rem;
-}
-
-.githubIcon:hover {
-  color: #ffffff;
-  transform: scale(1.2);
-}
-
-.navLinks li a {
-  font-family: 'Inter', sans-serif;
-  text-decoration: none;
-  color: white;
-  font-weight: 500;
-  position: relative;
-  transition: all 0.3s ease;
 }
 
 .navLinks li a {
@@ -77,7 +53,6 @@
   position: relative;
   text-decoration: none;
   transition: all 0.3s ease;
-
 }
 
 .navLinks li a::after {
@@ -89,7 +64,6 @@
   height: 2px;
   background: #9affff;
   transition: width 0.3s ease;
-  
 }
 
 .navLinks li a:hover::after {
@@ -97,6 +71,18 @@
 }
 
 .navLinks li a:hover {
-  color: #9affff;
+  color: #d1f0f0;
   transform: scale(1.05);
+}
+
+.githubIcon {
+  color: rgba(255, 255, 255, 0.6);
+  transition: transform 0.2s ease, color 0.3s ease;
+  margin-left: 1.5rem;
+  
+}
+
+.githubIcon:hover {
+  color: #ffffff;
+  transform: scale(1.2);
 }
