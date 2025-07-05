@@ -20,7 +20,12 @@ export default function Home() {
         <source src="/mind.mp4" type="video/mp4" />
       </video>
 
-      <div className={styles.initials}>SS.</div>
+      {/* might not need this? <div className={styles.initials}>SS.</div> */}
+      <img
+         src="mindbytelogo2.png" 
+         alt="MindByte Logo"
+         className={styles.logo}
+      />
 
       {/* Hero Content */}
       <div className={styles.content}>
