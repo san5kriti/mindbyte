@@ -49,10 +49,11 @@
   font-weight: 700;
   font-size: 0.9rem;
   letter-spacing: 0.08em;
-  color: white;
+  color: rgba(255, 255, 255, 0.901);
   position: relative;
   text-decoration: none;
   transition: all 0.3s ease;
+  
 }
 
 .navLinks li a::after {
@@ -62,17 +63,19 @@
   left: 0;
   width: 0%;
   height: 2px;
-  background: #9affff;
+  background: #ffffff;
   transition: width 0.3s ease;
 }
 
 .navLinks li a:hover::after {
   width: 100%;
+  
 }
 
 .navLinks li a:hover {
-  color: #d1f0f0;
+  color: #ffffff;
   transform: scale(1.05);
+  text-shadow: 0 0 4px #ffffff;
 }
 
 .githubIcon {

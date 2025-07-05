@@ -52,11 +52,11 @@ export default function About() {
   }, []);
 
   return (
-    <div className={styles.aboutWrapper}>
+    <div id="about" className={styles.aboutWrapper}>
       <canvas ref={canvasRef} className={styles.starCanvas} />
 
       <motion.section
-        id="about"
+        
         className={styles.aboutSection}
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
