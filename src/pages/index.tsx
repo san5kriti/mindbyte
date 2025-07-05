@@ -1,5 +1,6 @@
 import styles from '@/styles/Home.module.css';
-import About from '../pages/about'; // wherever your About.tsx lives (adjust if needed)
+import About from '../pages/about'; 
+import Navbar from '../pages/components/navbar'; 
 
 export default function Home() {
   const scrollToAbout = () => {
@@ -9,6 +10,7 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
+       <Navbar />
       {/* Background Video */}
       <video
         className={styles.backgroundVideo}
@@ -21,11 +23,7 @@ export default function Home() {
       </video>
 
       {/* might not need this? <div className={styles.initials}>SS.</div> */}
-      <img
-         src="mindbytelogo2.png" 
-         alt="MindByte Logo"
-         className={styles.logo}
-      />
+      
 
       {/* Hero Content */}
       <div className={styles.content}>
