@@ -37,7 +37,7 @@
 }
 
 .navLinks {
-  size: 24px;
+  size: 28px;
   list-style: none;
   display: flex;
   gap: 2rem;
@@ -45,6 +45,17 @@
   margin-left: 30rem;
   margin-top: -3%;
   
+}
+.githubIcon {
+  color: rgba(255, 255, 255, 0.347);
+  transition: transform 0.2s ease, color 0.3s ease;
+  margin-left: 70rem;
+  top: -0.75rem;
+}
+
+.githubIcon:hover {
+  color: #ffffff;
+  transform: scale(1.2);
 }
 
 .navLinks li a {

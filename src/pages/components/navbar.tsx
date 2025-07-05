@@ -1,6 +1,7 @@
 // components/Navbar.tsx
 import Link from "next/link";
 import styles from '@/styles/Navbar.module.css';
+import { FaGithub } from 'react-icons/fa';
 
 export default function Navbar() {
   return (
@@ -19,6 +20,16 @@ export default function Navbar() {
         <li><Link href="#demo">Demo</Link></li>
         <li><Link href="#contact">Contact</Link></li>
       </ul>
+      {/* GitHub icon on far right */}
+      <a
+        href="https://github.com/san5kriti/" // 👈 Replace with your GitHub
+        target="_blank"
+        rel="noopener noreferrer"
+        className={styles.githubIcon}
+      >
+        <FaGithub size={22} />
+      </a>
     </nav>
+
   );
 }
