@@ -204,3 +204,7 @@
   color: #FFD580;
   font-weight: 600;
 }
+
+#about {
+  scroll-margin-top: 6rem; /* match your navbar height */
+}

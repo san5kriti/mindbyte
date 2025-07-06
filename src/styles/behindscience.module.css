@@ -19,7 +19,7 @@
   position: relative;
   z-index: 1;
   padding: 6rem 2rem;
-  backdrop-filter: blur(2px); /* optional: gives a futuristic glow */
+  backdrop-filter: blur(0px); /* optional: gives a futuristic glow! */
 }
 
 /* reuse the rest from earlier */
@@ -59,9 +59,9 @@
   display: flex;
   justify-content: center;
 }
-
 .neuralImage {
   width: 90%;
-  max-width: 500px;
+  max-width: 450px;
   height: auto;
+  image-rendering: pixelated; /* for crisp pixel effect */
 }
