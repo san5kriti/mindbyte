@@ -15,9 +15,11 @@ export default function Navbar() {
   <ul className={styles.navLinks}>
     <li><Link href="#about">About</Link></li>
     <li><Link href="#features">Features</Link></li>
-    <li><Link href="#docs">Docs</Link></li>
+    <li><Link href="/docs">Docs</Link></li> 
     <li><Link href="#contact">Contact</Link></li>
   </ul>
+  {/* Important note: For scrolling in same page use section IDs! 
+      Else if opening in different page e.g Docs, use '/' */}
 
   <div className={styles.right}>
     <a
