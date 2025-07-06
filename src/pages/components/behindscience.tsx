@@ -33,7 +33,7 @@ export default function BehindTheScience() {
       <br /><br />
       From AI-generated <strong>flashcards</strong> to <strong>personalized quizzes</strong> that mirror real exam pressure, MindByte adapts to how your brain learns best. Your <strong>AI study companion</strong> keeps you focused, while <strong>progress dashboards</strong> help you track what’s working and what’s not, in real time.
       <br /><br />
-      The result? A deeply personal, data-driven study experience that blends neuroscience with machine intelligence designed to help you learn faster, remember longer, and feel more confident every step of the way.
+      The result? A deeply personal, UI friendly, data-driven study experience that blends neuroscience with machine intelligence designed to help you learn faster, remember longer, and feel more confident every step of the way.
     </p>
   </motion.div>
 

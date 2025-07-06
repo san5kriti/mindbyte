@@ -12,7 +12,8 @@
   height: 100%;
   object-fit: cover;
   z-index: 0;
-  filter: brightness(0.3); /* optional: dims the video */
+  filter: brightness(0.1); /* optional: dims the video */
+  opacity: 0.50;
 }
 
 .overlayContent {

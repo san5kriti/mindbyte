@@ -1,6 +1,7 @@
 import styles from '@/styles/Home.module.css';
 import About from '../pages/about'; 
 import Navbar from '../pages/components/navbar'; 
+import Link from 'next/link';
 
 export default function Home() {
   const scrollToAbout = () => {
@@ -51,14 +52,15 @@ export default function Home() {
 
         {/* Buttons */}
         <div className={styles.buttonGroup}>
-          <button className={styles.scrollButton2} onClick={scrollToAbout}>
-            Learn More
-          </button>
-          <button className={styles.scrollButton2}>Demo</button>
+        <Link href="#about">
+          <button className={styles.scrollButton2}>Learn More</button>
+        </Link>
+        <Link href="/demo">
+           <button className={styles.scrollButton2}>Demo</button>
+         </Link>
         </div>
       </div>
-
-      
+  
       <About />
     </div>
   );
