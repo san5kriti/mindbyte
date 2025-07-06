@@ -10,7 +10,7 @@ export default function Docs() {
       </Head>
 
       <main className={styles.docsWrapper}>
-        <h1>Demo Disclaimer & Transparency Statement</h1>
+        <p><strong>Demo Disclaimer & Transparency Statement</strong></p>
 
         <section>
           <p>
@@ -21,7 +21,7 @@ export default function Docs() {
         </section>
 
         <section>
-          <h2>Data Privacy and Handling</h2>
+          <p><strong>Data Privacy and Handling</strong></p>
           <ul>
             <li>This demo does not collect, store, or share any personal user data.</li>
             <li>Uploaded files (text, PDFs, or videos) are handled temporarily and locally during the session.</li>
@@ -31,7 +31,7 @@ export default function Docs() {
         </section>
 
         <section>
-          <h2>AI Features and Limitations</h2>
+          <p><strong>AI Features and Limitations</strong></p>
           <ul>
             <li>Flashcards and quiz responses are generated using AI language models based on the uploaded or entered material.</li>
             <li>Outputs may occasionally contain inaccuracies or lack context. Users are strongly encouraged to verify all generated content before relying on it in academic or professional settings.</li>
@@ -40,7 +40,7 @@ export default function Docs() {
         </section>
 
         <section>
-          <h2>Intellectual Property and Attribution</h2>
+          <p><strong>Intellectual Property and Attribution</strong></p>
           <ul>
             <li>This entire demo — including all frontend code, UI components, visual design, and interaction logic — is the original and sole creation of Sanskriti Shelke, unless explicitly credited otherwise.</li>
             <li>All design elements, animations, layout styles, and visual motifs are custom-made.</li>
@@ -50,7 +50,7 @@ export default function Docs() {
         </section>
 
         <section>
-          <h2>License and Intended Use</h2>
+          <p><strong>License and Intended Use</strong></p>
           <ul>
             <li>This prototype is released strictly for non-commercial, educational, and portfolio purposes.</li>
             <li>Redistribution, reproduction, or adaptation of this project’s design, logic, or interface — in part or in full — is not permitted without prior written consent from the author.</li>
@@ -59,7 +59,7 @@ export default function Docs() {
         </section>
 
         <section>
-          <h2>Author Statement</h2>
+          <p><strong>Author Statement</strong></p>
           <p>
             This platform is the intellectual and creative work of <strong>Sanskriti Shelke</strong>, who has independently developed every aspect of its architecture — from codebase to concept to design. Unless otherwise stated, all work displayed here reflects her personal authorship, including graphics, interface components, motion logic, and AI integration methods.
           </p>
@@ -69,7 +69,7 @@ export default function Docs() {
         </section>
 
         <section>
-          <h2>Credits</h2>
+          <p><strong>Credits</strong></p>
           <ul>
             <li><strong>Framework & Libraries:</strong> Next.js, React, Tailwind CSS, Framer Motion, React Icons</li>
             <li><strong>Typography:</strong> Merriweather (Google Fonts)</li>
@@ -81,7 +81,7 @@ export default function Docs() {
         </section>
 
         <section>
-          <h2>Contact</h2>
+          <p><strong>Contact</strong></p>
           <p>For professional inquiries, collaborations, or questions regarding licensing and usage, please reach out via:</p>
           <ul>
             <li><strong>Email:</strong> <a href="mailto:sanskritishelke@gmail.com">sanskritishelke@gmail.com</a></li>

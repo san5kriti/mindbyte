@@ -27,15 +27,17 @@
 
 .aboutTitle {
   font-family: 'Inter', sans-serif;
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .aboutText {
   font-family: 'Space Grotesk', sans-serif;
   font-size: 1.2rem;
-  max-width: 800px;
+  max-width: 1000px;
+  text-align: left;
   margin: 0 auto 4rem;
   line-height: 1.6;
   font-weight: 400;
@@ -65,7 +67,7 @@
 
 /* 🎡 Marquee Styling */
 .marqueeRow {
-  margin-top: 3rem;
+  margin-top: 5rem;
   display: flex;
   align-items: center;
   font-size: 1rem;
@@ -96,6 +98,7 @@
   cursor: default;
 }
 
+/* can change the animation if need */
 .wordSwitcher {
   display: inline-block;
   height: 1.2em;
@@ -116,7 +119,7 @@
   text-decoration-color: #00ffff; /* Aqua neon */
   text-underline-offset: 4px;
   font-weight: 600;
-}
+} 
 
 @keyframes slideWords {
   0%    { transform: translateY(0%); }
@@ -186,10 +189,6 @@
   color: white;
 }
 
-/* Right Column - Bio */
-.bioColumn {
-  flex: 1;
-}
 
 .sectionTitle {
   font-size: 2.2rem;

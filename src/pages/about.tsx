@@ -64,18 +64,21 @@ export default function About() {
         viewport={{ once: true }}
       >
         <h2 className={styles.aboutTitle}>
-          Intelligent Study. Powered by Neural Design. For{' '}
-          <span className={styles.wordSwitcher}>
-            <span className={styles.word}>Thinkers.</span>
-            <span className={styles.word}>Students.</span>
+          Not another productivity app but a neural system for mastering knowledge.
+          <br/>{' '}
+          {/* <span className={styles.wordSwitcher}>
+            <span className={styles.word}>burnout.</span>
+            <span className={styles.word}>stress.</span>
             <span className={styles.word}>Learners.</span>
             <span className={styles.word}>You.</span>
-          </span>
+          </span> */}
         </h2>
 
         <p className={styles.aboutText}>
-          MindByte is your AI-powered cognitive learning companion — designed to replace outdated study habits with smart, neuroscience-inspired methods.
-          From interactive flashcards and gamified quizzes to an intelligent study planner and real-time performance insights, MindByte transforms how you absorb, retain, and master knowledge.
+          The future of learning isn’t <strong>passive</strong>. It’s<strong> powered</strong>.
+          MindByte is your intelligent study engine,crafted at the intersection of neuroscience and design. 
+          It doesn’t just help you study; it teaches your brain how to learn better. With adaptive flashcards, memory-boosting quizzes, and a planner that thinks ahead, 
+          MindByte turns cognitive theory into everyday mastery.
         </p>
 
         <div className={styles.videoWrapper}>
@@ -84,6 +87,7 @@ export default function About() {
             Your browser does not support the video tag.
           </video>
         </div>
+        
 
         <Marquee speed={40} gradient={false} pauseOnHover className={styles.marqueeRow}>
           <div className={styles.feature}>🦾 AI Companion</div>

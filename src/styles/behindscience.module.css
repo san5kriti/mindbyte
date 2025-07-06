@@ -61,7 +61,7 @@
 }
 .neuralImage {
   width: 90%;
-  max-width: 450px;
+  max-width: 400px;
   height: auto;
   image-rendering: pixelated; /* for crisp pixel effect */
 }
