@@ -1,5 +1,3 @@
-/* src/styles/demo.module.css */
-
 .container {
   position: relative;
   width: 100%;
@@ -19,22 +17,72 @@
   filter: brightness(0.9);
 }
 
+.topLeft {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  z-index: 10;
+}
+
+.homeButton {
+  padding: 0.6rem 1.4rem;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  border-radius: 100px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.homeButton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.4));
+  transform: skewX(-20deg);
+  transition: left 0.5s ease;
+}
+
+.homeButton:hover::before {
+  left: 125%;
+}
+
+.homeButton:hover {
+  background: rgba(255, 255, 255, 1);
+  color: black;
+  border-color: rgba(255, 255, 255, 0.05);
+  transform: translateY(-2px);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
 .overlay {
   position: relative;
   z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   height: 100%;
   text-align: center;
   padding: 2rem;
+  padding-top: 5rem; /* CHANGED from 8rem → 5rem */
 }
 
 .logo {
-  width: 600px;
-  margin-top: -10rem;
+  width: 500px; /* CHANGED from 500px */
+  max-width: 100%;
   animation: float 4s ease-in-out infinite;
+  margin-bottom: 3rem; /* CHANGED from 2rem */
 }
 
 @keyframes float {
@@ -43,12 +91,10 @@
   100% { transform: translateY(0); }
 }
 
-
-
 .subtitle {
   font-size: 1rem;
-  max-width: 1000px;
-  margin-bottom: 15rem;
+  max-width: 800px;
+  margin-bottom: 2rem; /* CHANGED from 2.5rem */
   line-height: 1.6;
 }
 
@@ -57,10 +103,11 @@
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  margin-top: 0.5rem; /* CHANGED from 1rem */
 }
-
 .input {
-  width: 800px;
+  width: 600px;
+  max-width: 90vw;
   padding: 0.8rem 1rem;
   border-radius: 8px;
   border: none;
@@ -71,42 +118,15 @@
 
 .input::placeholder {
   color: #ccc;
-  
 }
 
-.button {
-  padding: 0.7rem 1.2rem;
-  font-size: 1rem;
-  background-color: white;
-  color: black;
-  border-radius: 6px;
-  margin-top: 2rem;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-
-.button:hover {
-  transform: scale(1.05);
-}
-
-.result {
-  margin-top: 2rem;
-  max-width: 700px;
-  background: rgba(0, 0, 0, 0.4);
-  padding: 1.5rem;
-  border-radius: 10px;
-  text-align: left;
-  white-space: pre-wrap;
-}
 .scrollButton2 {
-  padding: 0.90rem 2.5rem;
+  padding: 0.9rem 2.5rem;
   max-width: 600px;
   border: 2px solid rgba(255, 255, 255, 0.8);
   border-radius: 3cm;
   background: transparent;
   color: rgba(255, 255, 255, 0.9);
-  /* font-family: 'Orbitron', sans-serif; */
   font-family: 'Inter', sans-serif;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -116,8 +136,6 @@
   position: relative;
   overflow: hidden;
   transition: all 0.4s ease;
-  margin-top: 3%;
-  margin-left: 4%;
 }
 
 .scrollButton2::before {
@@ -142,4 +160,14 @@
   transform: translateY(-3px);
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
   color: black;
+}
+
+.result {
+  margin-top: 2rem;
+  max-width: 700px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: left;
+  white-space: pre-wrap;
 }

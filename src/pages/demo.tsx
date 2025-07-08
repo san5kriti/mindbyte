@@ -1,8 +1,6 @@
-// src/pages/demo.tsx
-
 import { useState } from "react";
 import styles from "../styles/demo.module.css";
-import Link from 'next/link';
+import Link from "next/link";
 
 export default function DemoPage() {
   const [topic, setTopic] = useState("");
@@ -26,7 +24,6 @@ export default function DemoPage() {
       setLoading(false);
     }
   };
-  
 
   return (
     <div className={styles.container}>
@@ -34,16 +31,24 @@ export default function DemoPage() {
         <source src="/mind.mp4" type="video/mp4" />
       </video>
 
-      <Link href="/">
-        <button className={styles.scrollButton2}>← Home</button>
-      </Link>
+      {/* Home Button in top-left corner */}
+      <div className={styles.topLeft}>
+        <Link href="/">
+          <button className={styles.homeButton}>← Home</button>
+        </Link>
+      </div>
 
+      {/* Main Content */}
       <div className={styles.overlay}>
-        <img src="/mindbytelogo2.png" alt="MindByte Logo" className={styles.logo} />
-        
+        <img
+          src="/mindbytelogo2.png"
+          alt="MindByte Logo"
+          className={styles.logo}
+        />
+
         <p className={styles.subtitle}>
-          Enter any topic below — MindByte’s intelligent engine will instantly craft flashcards tailored to your mind. 
-          
+          Enter any topic below — MindByte’s intelligent engine will instantly
+          craft flashcards tailored to your mind.
         </p>
 
         <div className={styles.inputSection}>
