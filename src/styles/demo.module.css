@@ -1,10 +1,9 @@
 .container {
   position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100vh;
   font-family: 'Inter', sans-serif;
   color: white;
+  overflow-x: hidden; /* ✅ Allow vertical scroll */
 }
 
 .backgroundVideo {
@@ -164,10 +163,73 @@
 
 .result {
   margin-top: 2rem;
-  max-width: 700px;
-  background: rgba(0, 0, 0, 0.4);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 600px;
+}
+
+.result > div {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.flipCard {
+  background-color: transparent;
+  width: 100%;
+  height: 180px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.flipInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+.flipCard.flipped .flipInner {
+  transform: rotateY(180deg);
+}
+
+.flipFront,
+.flipBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
   padding: 1.5rem;
-  border-radius: 10px;
-  text-align: left;
-  white-space: pre-wrap;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: white;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flipBack {
+  transform: rotateY(180deg);
 }

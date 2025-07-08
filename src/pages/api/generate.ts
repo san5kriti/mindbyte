@@ -24,15 +24,35 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       messages: [
         {
           role: "user",
-          content: `Give me 5 smart, clear flashcards on the topic: "${topic}". Format them nicely.`,
+          content: `
+You're an AI flashcard generator. Based on the topic "${topic}", generate 5 flashcards in the following JSON format:
+
+[
+  {
+    "question": "Your question here?",
+    "answer": "Your answer here."
+  },
+  ...
+]
+
+Only return the JSON array, nothing else. Make it accurate, clean, and useful.
+          `.trim(),
         },
       ],
+      temperature: 0.7,
     });
 
-    const output = chatResponse.choices[0]?.message?.content;
-    res.status(200).json({ output });
+    const content = chatResponse.choices[0]?.message?.content;
+
+    if (!content) {
+      return res.status(500).json({ error: "No content from OpenAI" });
+    }
+
+    // Try parsing JSON from the content
+    const flashcards = JSON.parse(content);
+    return res.status(200).json({ flashcards });
   } catch (err: any) {
     console.error("OpenAI API error:", err);
-    res.status(500).json({ error: "Something went wrong with OpenAI" });
+    return res.status(500).json({ error: "Something went wrong with OpenAI" });
   }
 }
