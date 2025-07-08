@@ -33,7 +33,7 @@
 
 .logo {
   width: 600px;
-  margin-bottom: -5rem;
+  margin-top: -10rem;
   animation: float 4s ease-in-out infinite;
 }
 
@@ -48,7 +48,7 @@
 .subtitle {
   font-size: 1rem;
   max-width: 1000px;
-  margin-bottom: 2rem;
+  margin-bottom: 15rem;
   line-height: 1.6;
 }
 
@@ -98,4 +98,48 @@
   border-radius: 10px;
   text-align: left;
   white-space: pre-wrap;
+}
+.scrollButton2 {
+  padding: 0.90rem 2.5rem;
+  max-width: 600px;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  border-radius: 3cm;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.9);
+  /* font-family: 'Orbitron', sans-serif; */
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  margin-top: 3%;
+  margin-left: 4%;
+}
+
+.scrollButton2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.661), rgba(255, 255, 255, 0.518));
+  transform: skewX(-20deg);
+  transition: left 0.5s ease;
+}
+
+.scrollButton2:hover::before {
+  left: 125%;
+}
+
+.scrollButton2:hover {
+  background: rgba(255, 255, 255, 1);
+  border-color: rgba(255, 255, 255, 0.05);
+  transform: translateY(-3px);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+  color: black;
 }

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import styles from "../styles/demo.module.css";
+import Link from 'next/link';
 
 export default function DemoPage() {
   const [topic, setTopic] = useState("");
@@ -25,12 +26,17 @@ export default function DemoPage() {
       setLoading(false);
     }
   };
+  
 
   return (
     <div className={styles.container}>
       <video autoPlay loop muted className={styles.backgroundVideo}>
         <source src="/mind.mp4" type="video/mp4" />
       </video>
+
+      <Link href="/">
+        <button className={styles.scrollButton2}>← Home</button>
+      </Link>
 
       <div className={styles.overlay}>
         <img src="/mindbytelogo2.png" alt="MindByte Logo" className={styles.logo} />
@@ -49,7 +55,7 @@ export default function DemoPage() {
             className={styles.input}
           />
           <button
-            className={styles.button}
+            className={styles.scrollButton2}
             onClick={generateFlashcards}
             disabled={loading || !topic.trim()}
           >
