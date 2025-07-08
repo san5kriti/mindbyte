@@ -84,7 +84,7 @@ export default function Docs() {
           <p><strong>Contact</strong></p>
           <p>For professional inquiries, collaborations, or questions regarding licensing and usage, please reach out via:</p>
           <ul>
-            <li><strong>Email:</strong> <a href="mailto:sanskritishelke@gmail.com">sanskritishelke@gmail.com</a></li>
+            <li><strong>Email:</strong> <a href="mailto:sanskritishelke.r@gmail.com">sanskritishelke.r@gmail.com</a></li>
             <li><strong>Website:</strong> <a href="https://sanskritishelke.com/" target="_blank" rel="noopener noreferrer">sanskritishelke.com</a></li>
             <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/sanskritishelke" target="_blank" rel="noopener noreferrer">linkedin.com/in/sanskritishelke</a></li>
           </ul>
