@@ -202,16 +202,16 @@
 
 .wordSwitcher .word:nth-child(2) {
   text-decoration: underline;
-  text-decoration-color: #ff69b4; /* Hot Pink */
+  text-decoration-color: #7eff68; /* Green? */
   color: white;
-  text-shadow: 0 0 4px #ff69b4;
+  text-shadow: 0 0 4px #7eff68;
 }
 
 .wordSwitcher .word:nth-child(3) {
   text-decoration: underline;
-  text-decoration-color: #ffd700; /* Gold */
+  text-decoration-color: #ff5165; /* Red */
   color: white;
-  text-shadow: 0 0 4px #ffd700;
+  text-shadow: 0 0 4px #ff5165;
 }
 
 .wordSwitcher .word:nth-child(4) {
