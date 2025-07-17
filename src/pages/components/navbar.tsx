@@ -1,6 +1,7 @@
 // components/Navbar.tsx
 import Link from "next/link";
 import styles from '../../styles/Navbar.module.css'
+
 import { FaGithub } from 'react-icons/fa';
 
 export default function Navbar() {
