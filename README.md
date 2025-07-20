@@ -1,40 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# 🧠 MindByte
 
-## Getting Started
+MindByte is an AI-powered study tool designed to generate flashcards from natural language prompts especially helpful for overwhelmed, neuro-curious, or visually-driven learners.
 
-First, run the development server:
+Built with love, code, and too much matcha! 🍵
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## ✨ Features
+
+- 🔍 **AI-Powered Flashcard Generator** – Converts user prompts into structured Q&A flashcards using language models.
+- 💛 **Interactive Flashcard UI** – Swipe or flip through cards to study in your own rhythm.
+- 🧬 **Neuro-Inclusive Design** – Clean, low-distraction interface for focus and clarity.
+- 💬 **Minimal Input, Maximum Output** – You write the question. MindByte does the rest.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** React.js, TypeScript, Tailwind CSS  
+- **Backend/API:** OpenAI (or your preferred LLM provider), Express (optional)  
+- **State Management:** useState / useEffect (local), future upgrade: Redux or Zustand  
+- **Deployment:** Vercel / Netlify (recommended)
+
+---
+
+## 🌱 Example Prompt 🌱
+
+> “Summarise key ideas from neural networks in the simplest form.”
+
+**Generated Flashcard Example:**
+```
+Q: What is a neural network?  
+A: A model inspired by the brain that uses layers of artificial neurons to make predictions.
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## 🗻 Inspiration 🫧
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+I built MindByte to support learners like myself — those who need structure, clarity, and calm when studying complex topics. It began as a personal tool and evolved into something I hope can help others too.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📑 Future Features 
 
-## Learn More
+- User auth & saved decks  
+- Tagging & search for flashcards  
+- Speech-to-text input  
+- Themes & accessibility modes so you could enjoy the aesthetic 💞
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+## 🤝 Contributing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This repo is solo-built but open to feedback, ideas, and contributions.  
+Feel free to reach out for collabs or any ideas!!
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+##  License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+All Rights Reserved.
+
+Copyright (c) 2025 Sanskriti Shelke.
+
+Unauthorized use, distribution, or modification of this code is strictly prohibited.
+Please contact the author for permissions or use of code!!
+
+---
+
+## 🌸 Author 🌸
+
+**Sanskriti Shelke**  
+[LinkedIn](https://www.linkedin.com/in/sanskriti-shelke) • [GitHub](https://github.com/san5kriti) • [Portfolio](https://yourportfolio.link)
